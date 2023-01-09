@@ -201,4 +201,14 @@ class RealtyActivity : AppCompatActivity() {
 
         return Bitmap.createScaledBitmap(image,width, height, true)
     }
+    
+    
+     override fun onBackPressed() {
+        super.onBackPressed()
+        val intent = Intent(applicationContext,MainActivity::class.java)
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
+        startActivity(intent)
+    }
+    
+    
 }
